@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body{
+    background-color: #9DBEB9;
+}
+
+
+.flex{
+    display: flex;
+
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+ 
+    align-items: center;
+    
+}
+
+header > .left{
+    gap: 20px;
+    flex: 1;
+    padding-left: 3%;
+}
+
+header > .right{
+    flex: 1;
+    
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
+   
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star{
+    position: relative;
+    
+}
+
+.star > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal_circle{
+    background-color: #37A3B8;
+    border-radius: 50%;
+    padding: 5%;
+    color: white;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+.goal_txt{
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.white_circle{
+
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -400%;
+    left: 15%;
+}
+
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    transform: translateY(-20px);
+    border-bottom: 20px solid white;
+}
+
+.box{
+    background-color: white;
+     width: 20vw;
+     height: 30vh;
+     transform: translateY(50px);
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 20px;align-items: center;
+     text-align: center;
+}
+
+
+.show_txt{
+    transition: .3s;
+    animation: show_txt .5s ease-in-out forwards;
+}
+
+
+.hide_txt{
+    transition: .3s;
+    animation: hide_txt .5s ease-in-out forwards;
+}
+
+.show_middle_txt{
+    transition: .3s;
+    animation: show_middle_txt .5s ease-in-out forwards;
+}
+
+
+@keyframes show_middle_txt {
+    
+    from{
+        opacity: 0;
+        font-size: 1px;
+    }
+
+    to{
+        opacity: 1;
+        font-size: 17px;
+    }
+
+}
+
+
+@keyframes show_txt {
+
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+        
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes hide_txt {
+
+    from{
+        transform: translateX(0px);
+        opacity: 1;
+        
+    }
+
+    to{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    
+}
+
+.hide_left_txt{
+    transition: .3s;
+    animation: hide_left_txt .5s ease-in-out forwards;
+}
+
+.show_left_txt{
+    transition: .3s;
+    animation: show_left_txt .5s ease-in-out forwards;
+}
+@keyframes show_left_txt {
+
+    from{
+        transform: translateX(-200px);
+        opacity: 0;
+        
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes hide_left_txt {
+
+    from{
+        transform: translateX(0px);
+        opacity: 1;
+        
+    }
+
+    to{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    
+}
+
+.moving_triangle{
+    animation: moving_triangle 3s infinite ease-in-out ;
+}
+
+@keyframes moving_triangle {
+
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    
+
+    50%{
+        opacity: 1;
+        transform: translateY(25px);
+    }
+
+    70%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+
+
+}
